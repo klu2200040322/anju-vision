@@ -46,7 +46,7 @@ const LeadershipSection = () => {
           {leaders.map(l => (
             <div key={l.name} className="bg-teal-dark rounded-xl border-l-[6px] border-primary overflow-hidden flex flex-col sm:flex-row">
               <div className="sm:w-48 h-56 sm:h-auto flex-shrink-0">
-                <img src={l.image} alt={l.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <img src={l.image} alt={l.name} className="w-full h-full object-cover" />
               </div>
               <div className="p-6 flex-1">
                 <h3 className="font-display text-xl font-bold text-primary-foreground mb-1">{l.name}</h3>
