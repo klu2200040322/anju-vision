@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
+import hospitalMain from "@/assets/hospital-main.jpg";
+import hospitalArc from "@/assets/hospital-arc.jpg";
 
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-teal-deep via-teal-dark to-teal-deep overflow-hidden">
-    {/* Decorative elements */}
-    <div className="absolute inset-0 opacity-10">
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary blur-[120px]" />
-      <div className="absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full bg-teal-mid blur-[100px]" />
+    {/* Background hospital image */}
+    <div className="absolute inset-0">
+      <img src={hospitalMain} alt="Anju Eye Care Hospital" className="w-full h-full object-cover opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-teal-deep via-teal-deep/90 to-teal-deep/70" />
     </div>
 
     <div className="container mx-auto px-4 relative z-10">
-      <div className="max-w-3xl">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
         <div className="flex items-center gap-3 mb-6">
           <span className="inline-block bg-primary/20 text-teal-light text-xs font-semibold px-4 py-1.5 rounded-full border border-primary/30 tracking-widest uppercase">
             Eyecare Redefined
@@ -47,6 +50,17 @@ const HeroSection = () => (
             Explore Services <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
+      </div>
+
+      {/* Hospital images - right side */}
+      <div className="hidden lg:flex flex-col gap-4">
+        <div className="rounded-xl overflow-hidden shadow-2xl border border-primary/20">
+          <img src={hospitalMain} alt="Anju Eye Care Main Hospital Building" className="w-full h-64 object-cover" />
+        </div>
+        <div className="rounded-xl overflow-hidden shadow-2xl border border-primary/20">
+          <img src={hospitalArc} alt="ARC - Robotic & Laser Eye Centrum" className="w-full h-48 object-cover" />
+        </div>
+      </div>
       </div>
     </div>
   </section>
