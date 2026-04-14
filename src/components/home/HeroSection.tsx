@@ -53,12 +53,12 @@ const HeroSection = () => (
       </div>
 
       {/* Hospital images - right side */}
-      <div className="hidden lg:flex flex-col gap-4">
+      <div className="flex flex-col gap-4 mt-8 lg:mt-0">
         <div className="rounded-xl overflow-hidden shadow-2xl border border-primary/20">
-          <img src={hospitalMain} alt="Anju Eye Care Main Hospital Building" className="w-full h-64 object-cover" />
+          <img src={hospitalMain} alt="Anju Eye Care Main Hospital Building" className="w-full h-52 sm:h-64 object-cover" />
         </div>
         <div className="rounded-xl overflow-hidden shadow-2xl border border-primary/20">
-          <img src={hospitalArc} alt="ARC - Robotic & Laser Eye Centrum" className="w-full h-48 object-cover" />
+          <img src={hospitalArc} alt="ARC - Robotic & Laser Eye Centrum" className="w-full h-40 sm:h-48 object-cover" />
         </div>
       </div>
       </div>
